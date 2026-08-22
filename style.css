@@ -245,8 +245,8 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 2.5rem;
-    gap: 12rem;
+    margin-top: 6.5rem;
+    gap: 25rem;
     border: none;
 }
 
@@ -258,11 +258,6 @@ select{
     cursor: pointer;
     border: none;
     height: 20px;
-}
-
-#language5:hover{
-    border: 2px solid rgb(18, 206, 219);
-    background-color: rgb(32, 28, 75);
 }
 
 #btnme{

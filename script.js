@@ -42,4 +42,17 @@ contact.addEventListener("click",function(){
     foot.scrollIntoView({
       behavior:"smooth"
     });
-})
+});
+
+const language5=document.getElementById("language5");
+
+language5.addEventListener("change",function(){
+  const language=this.value;
+
+  const select = document.querySelector(".goog-te-combo");
+
+  if(select && language){
+    select.value=language;
+    select.dispatchEvent(new Event("change"));
+  }
+});
