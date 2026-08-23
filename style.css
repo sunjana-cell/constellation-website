@@ -486,10 +486,14 @@ select{
     width: 390px;
     border: 2px solid rgb(17, 18, 19);
     box-shadow: 0px 0px 10px#ffffff;
-    margin-top: 30px;
+    margin-top: 70px;
     margin-left: 492px;
     border-radius: 10px;
     gap: 100px;
+}
+
+.fact-quiz p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .dyk{
@@ -524,7 +528,6 @@ select{
     box-shadow: 0px 0px 10px white;
 }
 
-/* Layout and styling for the circumpolar section (keeps heading + images on one line) */
 .circumploar{
     display: flex;
     align-items: center;
@@ -540,20 +543,21 @@ select{
 .circumploar #polarhead{
     font-size: clamp(1.5rem, 3.5vw, 3rem);
     margin: 0;
-    padding-right: 0.75rem;
+    padding-right: 2.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12rem;
-    background: linear-gradient(90deg,#00f1e5 0%, #a166ff 100%);
+    background: linear-gradient(90deg,#ff049f 0%, #ff72f8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 0 8px 20px rgba(107,22,107,0.12);
+    text-shadow: 0 8px 20px rgba(255, 3, 255, 0.12);
     flex: 0 0 auto;
 }
 
 .circumploar img{
     width: 180px;
     height: 120px;
+    margin-left: 1rem;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.45), 0 0 12px rgba(228,116,228,0.14) inset;
@@ -582,10 +586,10 @@ select{
 .zodiacal1 #zohead{
     font-size: clamp(1.5rem, 3.5vw, 3rem);
     margin: 0;
-    padding-right: 0.75rem;
+    padding-right: 9.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12rem;
-    background: linear-gradient(90deg,#00f1e5 0%, #a166ff 100%);
+    background: linear-gradient(90deg, #ff049f 0%, #e474e4 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -596,6 +600,7 @@ select{
 .zodiacal1 img{
     width: 180px;
     height: 120px;
+    margin-left: 1rem;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.45), 0 0 12px rgba(228,116,228,0.14) inset;
@@ -624,10 +629,10 @@ select{
 .seasonal1 #seahead{
     font-size: clamp(1.5rem, 3.5vw, 3rem);
     margin: 0;
-    padding-right: 0.75rem;
+    padding-right: 8.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12rem;
-    background: linear-gradient(90deg,#00f1e5 0%, #a166ff 100%);
+    background: linear-gradient(90deg,#ff049f 0%, #e474e4 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -638,6 +643,7 @@ select{
 .seasonal1 img{
     width: 180px;
     height: 120px;
+    margin-left: 1rem;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.45), 0 0 12px rgba(228,116,228,0.14) inset;
@@ -652,11 +658,26 @@ select{
     filter: saturate(1.12) contrast(1.04);
 }
 
-.seasonal1 button{
-    color: #833bf7;
-    background-color: #31047a;
-    font-size: 20px;
-    cursor: pointer;
+#btnn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnn button{
+   background-color: #1f044b;
+   color: white;
+   width: 90px;
+   height: 20px;
+   border: none;
+   cursor: pointer;
+}
+
+#btnn button:hover{
+    border: 1px solid rgb(255, 248, 248);
+    color: rgb(255, 118, 187);
+    background-color: rgb(80, 6, 21);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
 #last{

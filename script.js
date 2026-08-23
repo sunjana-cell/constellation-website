@@ -44,15 +44,15 @@ contact.addEventListener("click",function(){
     });
 });
 
-const language5=document.getElementById("language5");
+const type=document.getElementById("types12");
 
-language5.addEventListener("change",function(){
-  const language=this.value;
-
-  const select = document.querySelector(".goog-te-combo");
-
-  if(select && language){
-    select.value=language;
-    select.dispatchEvent(new Event("change"));
+ type.addEventListener("click", function() {
+  const types12= this.value;
+  if (types12) {
+    const all = document.getElementById("polarhead");
+    if (all) {
+      all.scrollIntoView({ 
+        behavior: 'smooth' });
+    }
   }
 });
