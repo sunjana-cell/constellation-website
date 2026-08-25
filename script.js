@@ -85,3 +85,22 @@ if (click && fact) {
       fact.textContent = facts[currentFact];
   });
 }
+
+const submitt = document.getElementById("sub");
+const popup = document.getElementById("success-popup");
+
+submitt.addEventListener ("click", function(e){
+  e.preventDefault();
+
+  const form = submitt.closest("form");
+
+form.classList.add("hidden");
+popup.classList.remove("hidden");
+
+form.reset();
+
+setTimeout(function() {
+  popup.classList.add("hidden");
+},1000);
+
+});
