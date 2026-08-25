@@ -711,14 +711,14 @@ select{
     margin-right: 60px;
 }
 
-#feedback input{
+#feedback-1 input{
     height: 150px;
     width: 250px;
     text-align: center;
     cursor: pointer;
 }
 
-#feedback button{
+#feedback-1 button{
     background-color: #e474e4;
     color: #f5f5f5;
     cursor: pointer;
