@@ -520,6 +520,58 @@ select{
     box-shadow: 0px 0px 10px white;
 }
 
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .star-nav a,
+    #contactme {
+        font-size: 1rem;
+    }
+
+    #search-nav {
+        width: 100%;
+    }
+
+    #searchbtn {
+        font-size: 0.95rem;
+    }
+
+    #aboutauthor {
+        width: min(18rem, 80vw);
+    }
+
+    #shoot {
+        font-size: clamp(1.6rem, 7vw, 2.5rem);
+        margin-top: 2.5rem;
+    }
+
+    #exploremore {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .slider {
+        height: 18rem;
+    }
+
+    #box1 {
+        width: 13.75rem;
+        height: 13.75rem;
+    }
+
+#enter {
+        margin-right: 0;
+    }
+
+    .circumploar img,
+    .zodiacal1 img,
+    .seasonal1 img {
+        width: 9rem;
+        height: 6rem;
+    }
+}
+
 .circumploar{
     display: flex;
     align-items: center;
@@ -709,7 +761,7 @@ select{
 }
 
 #enter{
-    margin-right: 60px;
+    margin-right: 80px;
 }
 
 #feedback-1 input{
@@ -724,6 +776,11 @@ select{
     color: #f5f5f5;
     cursor: pointer;
 }
+
+#feedback input {
+        width: min(90vw, 250px);
+        height: 6.25rem;
+    }
 
 #success-popup {
   position: fixed;
@@ -802,70 +859,23 @@ select{
         padding: 1.5rem 1rem;
         gap: 1.5rem;
     }
-
-    #contactji,
-    #copyright {
-        padding-bottom: 0;
-    }
 }
 
-@media (max-width: 600px) {
-    body {
-        overflow-x: hidden;
-    }
+#chatbot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21rem;
+    width: 18rem;
+    background-color: #ffffff;
+    border-radius: 9px;
+    margin-top: 3rem;
+    margin-left: 540px;
+}
 
-    .star-nav a,
-    #contactme {
-        font-size: 1rem;
-    }
-
-    #search-nav {
-        width: 100%;
-    }
-
-    #searchbtn {
-        font-size: 0.95rem;
-    }
-
-    #aboutauthor {
-        width: min(18rem, 80vw);
-    }
-
-    #shoot {
-        font-size: clamp(1.6rem, 7vw, 2.5rem);
-        margin-top: 2.5rem;
-    }
-
-    #exploremore {
-        font-size: clamp(2rem, 8vw, 3rem);
-    }
-
-    .slider {
-        height: 18rem;
-    }
-
-    #box1 {
-        width: 13.75rem;
-        height: 13.75rem;
-    }
-
-    .factu {
-        width: 90%;
-    }
-
-    #feedback input {
-        width: min(90vw, 250px);
-        height: 6.25rem;
-    }
-
-    #enter {
-        margin-right: 0;
-    }
-
-    .circumploar img,
-    .zodiacal1 img,
-    .seasonal1 img {
-        width: 9rem;
-        height: 6rem;
-    }
+#chatnav p{
+    background-color: aqua;
+    color: #000000;
+    width: 100%;
+    text-align: center;
 }
