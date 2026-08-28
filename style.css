@@ -862,20 +862,60 @@ select{
 }
 
 #chatbot{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 21rem;
     width: 18rem;
     background-color: #ffffff;
-    border-radius: 9px;
     margin-top: 3rem;
     margin-left: 540px;
-}
+    border-radius: 10px;
+}    
 
-#chatnav p{
-    background-color: aqua;
-    color: #000000;
+#chatnav h1{
+    display: flex;
+    background-color: rgb(147, 223, 223);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #0f015a;
+    font-size: 20px;
+    height: 30px;
     width: 100%;
     text-align: center;
+}
+
+#botfoot{
+    display: flex;
+    margin-top: 210px;
+}
+
+#botfoot input{
+    height: 27px;
+    width: 100%;
+    color: #000000;
+    background-color: rgb(147, 223, 223);
+    text-align: center;
+    border-bottom-left-radius: 10px;
+}
+
+#sendbtn{
+    height: 27px;
+    width: 40px;
+    border: none;
+    background-color: rgb(147, 223, 223);
+    object-fit: cover;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+#botmsg{
+  background-color: #0d445e;
+  margin-top: 20px;
+  margin-left: 9px;
+  border-radius: 3px;
+  height: 53px;
+  width: 200px;
+}
+
+#hey{
+    font-size: 12px;
+    color: rgb(255, 255, 255);
 }
