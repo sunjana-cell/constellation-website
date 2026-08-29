@@ -61,6 +61,7 @@ h1 {
     margin-right: 0;
     border: none;
     cursor: pointer;
+    gap: 1rem;
 }
 
 #username-label {
@@ -109,17 +110,14 @@ h1 {
     border: 0.125rem solid rgb(18, 206, 219);
 }
 
-#continue-btn {
-    font-weight: bold;
-    width: 6.25rem;
-    height: 1.875rem;
-    background-color: rgb(119, 187, 233);
-    border: none;
-    cursor: pointer;
+#usererror{
+    font-size: 13px;
+    color: red;
 }
 
-#continue-btn:hover {
-    border: 0.125rem solid rgb(18, 206, 219);
+#passerror{
+    font-size: 13px;
+    color: red;
 }
 
 .starbody{

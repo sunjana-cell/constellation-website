@@ -5,12 +5,52 @@ signinbox.addEventListener("click", function(){
     const email = document.getElementById("email").value;
      const username = document.getElementById("user").value;
       const password = document.getElementById("password").value;
+      const usererror = document.getElementById("usererror");
+      const passerror = document.getElementById("passerror");
 
       if(email===""||username===""||password===""){
          alert("please fill all the details");
-      }else{
-        window.location.href="constellation.html";
-      }                                                                         
+         return;
+      }                    
+      
+      if(!/[a-zA-Z]/.test(username)){
+        usererror.textContent=
+        "username must contain upper and lowercase.";
+        return;
+      }
+
+      if(!/[0-9]/.test(username)){
+        usererror.textContent=
+        "username must contain numbers.";
+        return;
+      }
+
+      if(password.length<8){
+        passerror.textContent=
+        "Password must be at least 8 characters long.";
+        return ;
+      }
+
+      
+      if(!/[A-Z]/.test(password)){
+        passerror.textContent=
+        "atleast add one uppercase.";
+        return ;
+      }
+
+      if(!/[a-z]/.test(password)){
+        passerror.textContent=
+        "atleast add one lowercase.";
+        return ;
+      }
+
+      if(!/[0-9]/.test(password)){
+        passerror.textContent=
+        "atleast add one number.";
+        return ;
+      }
+
+      window.location.href="constellation.html";
 });
 }
 
