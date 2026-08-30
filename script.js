@@ -144,3 +144,59 @@ setTimeout(function() {
 },1000);
 
 });
+
+const input = document.getElementById("searchbtn");
+const sendBtn = document.getElementById("sendbtn");
+const botMsg = document.getElementById("botmsg");
+
+function sendMessage(){
+  const userText = input.value.trim();
+
+  if(userText ===""){
+    return;
+  }
+
+const userMessage = document.createElement("p");
+userMessage.classList.add("user-message");
+userMessage.textContent = userText;
+
+botMsg.appendChild(userMessage);
+
+input.value="";
+
+const botMessage = document.createElement("p");
+botMessage.classList.add("bot-message");
+
+const text = userText.toLowerCase();
+
+if(text.includes("hello")||text.includes("hi")){
+     botMessage.textContent = "hello! how can i help you?";
+}
+else if(text.includes("constellation")){
+  botMessage.textContent=" A constellation is a group of stars that forms a recognizable pattern in the sky.";
+}
+else if(text.includes("planet")){
+  botMessage.textContent="Planets are fun to learn about but i cant help you with your question yet.";
+}
+else if(text.includes("orion")){
+  botMessage.textContent="orion is an easiest recognisable constellation.";
+}
+else if(text.includes("thankyou")){
+  botMessage.textContent="most welcome.";
+}
+else{
+  botMessage.textContent="sorry , I don't know that yet.";
+}
+
+botMsg.appendChild(botMessage);
+
+botMsg.scrollTop = botMsg.scrollHeight;
+}
+
+sendBtn.addEventListener("click", sendMessage);
+
+input.addEventListener("keydown", function(event){
+  if(event.key === "Enter"){
+    sendMessage();
+  }
+});
