@@ -59,21 +59,37 @@ function searchConstellation(){
 }
 const search=document.getElementById("searchbtn");
 
-if(search){
 search.addEventListener("keydown", function(event){
   if(event.key === "Enter"){
-   console.log(search.value);
+   let searchValue = search.value.toLowerCase().trim();
+
+   if(searchValue ===""){
+    return;
+   }
+
+  let elements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, a, li, button, footer, header");
+
+  let found = false;
+
+  elements.forEach(function(element){
+
+    let text = element.textContent.toLowerCase();
+
+    if(!found && text.includes(searchValue)){
+
+      element.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+      found = true;
+    }
+  });
+
+  if(!found){
+    alert("nothing found for: "+ search.value);
   }
-});
 }
-
-const searchIcon=document.querySelector(".fa-magnifying-glass");
-
-if(searchIcon){
-searchIcon.addEventListener("click", function(){
-   console.log(search.value);
 });
-}
 
 const contact=document.getElementById("contactme");
 const foot=document.getElementById("contactji");
@@ -145,58 +161,3 @@ setTimeout(function() {
 
 });
 
-const input = document.getElementById("searchbtn");
-const sendBtn = document.getElementById("sendbtn");
-const botMsg = document.getElementById("botmsg");
-
-function sendMessage(){
-  const userText = input.value.trim();
-
-  if(userText ===""){
-    return;
-  }
-
-const userMessage = document.createElement("p");
-userMessage.classList.add("user-message");
-userMessage.textContent = userText;
-
-botMsg.appendChild(userMessage);
-
-input.value="";
-
-const botMessage = document.createElement("p");
-botMessage.classList.add("bot-message");
-
-const text = userText.toLowerCase();
-
-if(text.includes("hello")||text.includes("hi")){
-     botMessage.textContent = "hello! how can i help you?";
-}
-else if(text.includes("constellation")){
-  botMessage.textContent=" A constellation is a group of stars that forms a recognizable pattern in the sky.";
-}
-else if(text.includes("planet")){
-  botMessage.textContent="Planets are fun to learn about but i cant help you with your question yet.";
-}
-else if(text.includes("orion")){
-  botMessage.textContent="orion is an easiest recognisable constellation.";
-}
-else if(text.includes("thankyou")){
-  botMessage.textContent="most welcome.";
-}
-else{
-  botMessage.textContent="sorry , I don't know that yet.";
-}
-
-botMsg.appendChild(botMessage);
-
-botMsg.scrollTop = botMsg.scrollHeight;
-}
-
-sendBtn.addEventListener("click", sendMessage);
-
-input.addEventListener("keydown", function(event){
-  if(event.key === "Enter"){
-    sendMessage();
-  }
-});
