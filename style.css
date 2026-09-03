@@ -37,13 +37,15 @@ h1 {
 }
 
 #email {
-    width: min(20rem, 100%);
-    height: 2.1875rem;
+    width: min(22rem, 100%);
+    height: 2.5rem;
     border-radius: 0.3125rem;
     margin-top: 0.625rem;
     margin-right: 0;
     border: none;
     cursor: pointer;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
 }
 
 #email-label {
@@ -54,14 +56,16 @@ h1 {
 }
 
 #user {
-    width: min(20rem, 100%);
-    height: 1.875rem;
+    width: min(22rem, 100%);
+    height: 2.1rem;
     border-radius: 0.3125rem;
     margin-top: 0.625rem;
     margin-right: 0;
     border: none;
     cursor: pointer;
     gap: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
 }
 
 #username-label {
@@ -73,13 +77,15 @@ h1 {
 }
 
 #password {
-    width: min(20rem, 100%);
-    height: 1.875rem;
+    width: min(22rem, 100%);
+    height: 2.1rem;
     border-radius: 0.3125rem;
     margin-top: 0.625rem;
     margin-right: 0;
     border: none;
     cursor: pointer;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
 }
 
 #password-label {
@@ -99,11 +105,13 @@ h1 {
 
 #signinbtn {
     font-weight: bold;
-    width: 6.25rem;
-    height: 1.875rem;
+    width: 5.5rem;
+    height: 2.1rem;
     background-color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
 }
 
 #signinbtn:hover {
@@ -1161,62 +1169,84 @@ select{
 }
 
 #chatbot{
-    height: 21rem;
-    width: 18rem;
+    height: auto;
+    width: min(100%, 20rem);
+    max-width: 20rem;
     background-color: #ffffff;
-    margin-top: 3rem;
-    margin-left: 540px;
+    margin: 3rem auto 0;
     border-radius: 10px;
-}    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
 #chatnav h1{
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(147, 223, 223);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color: #0f015a;
-    font-size: 20px;
-    height: 30px;
+    font-size: 1.1rem;
+    min-height: 2.2rem;
     width: 100%;
     text-align: center;
+    padding: 0.5rem 1rem;
 }
 
 #botfoot{
     display: flex;
-    margin-top: 210px;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
 }
 
 #botfoot input{
-    height: 27px;
+    height: 3rem;
     width: 100%;
     color: #000000;
     background-color: rgb(147, 223, 223);
     text-align: center;
     border-bottom-left-radius: 10px;
+    border: none;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
 }
 
 #sendbtn{
-    height: 27px;
-    width: 40px;
+    height: 3rem;
+    width: 3rem;
     border: none;
     background-color: rgb(147, 223, 223);
     object-fit: cover;
     border-bottom-right-radius: 10px;
     cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
 }
 
 #botmsg{
   background-color: #0d445e;
-  margin-top: 20px;
-  margin-left: 9px;
+  margin: 1rem 0.6rem 0 0.6rem;
   border-radius: 3px;
-  height: 53px;
-  width: 200px;
+  min-height: 3.25rem;
+  width: min(82%, 13.75rem);
+  padding: 0.7rem 0.8rem;
 }
 
 #hey{
-    font-size: 12px;
+    font-size: 0.75rem;
     color: rgb(255, 255, 255);
+    line-height: 1.5;
+}
+
+#email::placeholder,
+#user::placeholder,
+#password::placeholder,
+#botfoot input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
 }
 
 /* Add this to the bottom of your stylesheet */
