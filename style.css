@@ -313,7 +313,7 @@ select{
     margin: 40px auto 0;
 }
 
-#facts {
+#fact-quiz {
     position: relative;
     display: flex;
     justify-content: center;
@@ -327,50 +327,6 @@ select{
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.08);
     overflow: hidden;
-}
-
-#facthead {
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    font-size: 1.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-}
-
-.fact-text {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 1.5rem 1.5rem;
-    margin: 0;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.6;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.fact-text.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-#fact-next {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
 }
 
 #video{
@@ -917,8 +873,8 @@ select{
 }
 
 #funcircum p{
-  color: rgb(78, 205, 255);
-  text-shadow: 0px 0px 10px rgb(14, 147, 165);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(102, 93, 93);
 }
 
 .zodiacal1{
@@ -1174,10 +1130,7 @@ select{
     max-width: 20rem;
     background-color: #ffffff;
     margin: 3rem auto 0;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    border-radius: 10px;  
 }
 
 #chatnav h1{
@@ -1193,6 +1146,7 @@ select{
     width: 100%;
     text-align: center;
     padding: 0.5rem 1rem;
+    margin-bottom: 0.85rem;
 }
 
 #botfoot{
@@ -1229,6 +1183,7 @@ select{
 #botmsg{
   background-color: #0d445e;
   margin: 1rem 0.6rem 0 0.6rem;
+  margin-bottom: 0.5rem;
   border-radius: 3px;
   min-height: 3.25rem;
   width: min(82%, 13.75rem);
@@ -1245,11 +1200,10 @@ select{
 #user::placeholder,
 #password::placeholder,
 #botfoot input::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     opacity: 1;
 }
 
-/* Add this to the bottom of your stylesheet */
 @media (max-width: 900px) {
   body {
     overflow-x: hidden;
