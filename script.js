@@ -1,69 +1,75 @@
 const signinbox= document.getElementById("signinbtn");
 
 if(signinbox){
-signinbox.addEventListener("click", function(){
-    const email = document.getElementById("email").value;
-     const username = document.getElementById("user").value;
-      const password = document.getElementById("password").value;
-      const usererror = document.getElementById("usererror");
-      const passerror = document.getElementById("passerror");
+const submitSignIn = function(){
+    const email = document.getElementById("email").value.trim();
+    const username = document.getElementById("user").value.trim();
+    const password = document.getElementById("password").value;
+    const usererror = document.getElementById("usererror");
+    const passerror = document.getElementById("passerror");
 
-      if(email===""||username===""||password===""){
-         alert("please fill all the details");
-         return;
-      }                    
-      
-      if(!/[a-zA-Z]/.test(username)){
-        usererror.textContent=
-        "username must contain upper and lowercase.";
-        return;
-      }
+    usererror.textContent = "";
+    passerror.textContent = "";
 
-      if(!/[0-9]/.test(username)){
-        usererror.textContent=
-        "username must contain numbers.";
-        return;
-      }
+    if(email === "" || username === "" || password === ""){
+      passerror.textContent = "Please complete every field to enter the observatory.";
+      return;
+    }
 
-      if(password.length<8){
-        passerror.textContent=
-        "Password must be at least 8 characters long.";
-        return ;
-      }
+    if(!/[a-zA-Z]/.test(username)){
+      usererror.textContent = "Username must contain letters.";
+      return;
+    }
 
-      
-      if(!/[A-Z]/.test(password)){
-        passerror.textContent=
-        "atleast add one uppercase.";
-        return ;
-      }
+    if(!/[0-9]/.test(username)){
+      usererror.textContent = "Username must contain at least one number.";
+      return;
+    }
 
-      if(!/[a-z]/.test(password)){
-        passerror.textContent=
-        "atleast add one lowercase.";
-        return ;
-      }
+    if(password.length < 8){
+      passerror.textContent = "Password must be at least 8 characters long.";
+      return;
+    }
 
-      if(!/[0-9]/.test(password)){
-        passerror.textContent=
-        "atleast add one number.";
-        return ;
-      }
+    if(!/[A-Z]/.test(password)){
+      passerror.textContent = "Add at least one uppercase letter.";
+      return;
+    }
 
-      window.location.href="constellation.html";
-});
+    if(!/[a-z]/.test(password)){
+      passerror.textContent = "Add at least one lowercase letter.";
+      return;
+    }
+
+    if(!/[0-9]/.test(password)){
+      passerror.textContent = "Add at least one number.";
+      return;
+    }
+
+    window.location.href="constellation.html";
+};
+
+signinbox.addEventListener("click", submitSignIn);
+
+const signinForm = document.getElementById("signinbox");
+if (signinForm) {
+  signinForm.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      submitSignIn();
+    }
+  });
+}
 }
 
-function searchConstellation(){
-  console.log(search.value);
-}
 const search=document.getElementById("searchbtn");
 
+if (search) {
 search.addEventListener("keydown", function(event){
   if(event.key === "Enter"){
    let searchValue = search.value.toLowerCase().trim();
 
-   if(searchValue ===""){
+   if(searchValue === ""){
     return;
    }
 
@@ -72,48 +78,37 @@ search.addEventListener("keydown", function(event){
   let found = false;
 
   elements.forEach(function(element){
-
     let text = element.textContent.toLowerCase();
 
     if(!found && text.includes(searchValue)){
-
-      element.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-      });
+      element.scrollIntoView({ behavior:"smooth", block:"center" });
       found = true;
     }
   });
 
   if(!found){
-    alert("nothing found for: "+ search.value);
+    alert("Nothing found for: " + search.value);
   }
 }
 });
+}
 
 const contact=document.getElementById("contactme");
 const foot=document.getElementById("contactji");
 
 if (contact && foot) {
   contact.addEventListener("click",function(){
-      foot.scrollIntoView({
-        behavior:"smooth"
-      });
+      foot.scrollIntoView({ behavior:"smooth", block:"start" });
   });
 }
 
 const type=document.getElementById("types12");
 
 if (type) {
-  type.addEventListener("click", function() {
-    const types12= this.value;
-    if (types12) {
-      const all = document.getElementById("polarhead");
-      if (all) {
-        all.scrollIntoView({ 
-          behavior: 'smooth' });
-      }
-    }
+  type.addEventListener("change", function() {
+    const targets = { circumpolar: "polarhead", zodiacal: "zohead", seasonal: "seahead" };
+    const target = document.getElementById(targets[this.value]);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
 
@@ -121,43 +116,65 @@ const fact = document.getElementById("one");
 const click = document.getElementById("clicki");
 
 const facts = [
-  "Aquarius is one of the oldest recognized constellations, positioned in a region of the sky often called The Sea because it is surrounded by other water-related constellations like Cetus (the whale), Pisces (the fish), and Eridanus (the river).",
-  "orion is one of the most easily recognizable constellation",
-  "scorpius contains the bright star Antras",
-  "The constellation leo represents a lion",
-  "Ursa major contains the famous Big Dipper",
+  "Aquarius is one of the oldest recognized constellations in a region of the sky once called The Sea.",
+  "Orion is one of the easiest constellations to recognize, with three bright stars forming his belt.",
+  "Scorpius contains Antares, a red supergiant whose warm glow has inspired observers for centuries.",
+  "Leo represents a lion and is especially easy to spot beneath the Big Dipper in the spring sky.",
+  "Ursa Major contains the Big Dipper, a familiar asterism used for navigation and stargazing."
 ];
 
 let currentFact = 0;
 
 if (click && fact) {
   click.addEventListener("click",function(){
-      currentFact++;
-
-      if(currentFact >= facts.length){
-        currentFact = 0;
-      }
-
-      fact.textContent = facts[currentFact];
+    currentFact = (currentFact + 1) % facts.length;
+    fact.textContent = facts[currentFact];
   });
 }
 
 const submitt = document.getElementById("sub");
+const feedbackForm = document.getElementById("feedback-1");
 const popup = document.getElementById("success-popup");
 
-submitt.addEventListener ("click", function(e){
-  e.preventDefault();
+if (submitt && feedbackForm && popup) {
+  const submitFeedback = function(event) {
+    event.preventDefault();
 
-  const form = submitt.closest("form");
+    const feedback = feedbackForm.querySelector("#feedback");
 
-form.classList.add("hidden");
-popup.classList.remove("hidden");
+    if (!feedback || feedback.value.trim() === "") {
+      if (feedback) {
+        feedback.focus();
+        feedback.setCustomValidity("Please enter your feedback before submitting.");
+        feedback.reportValidity();
+      }
+      return;
+    }
 
-form.reset();
+    feedback.setCustomValidity("");
 
-setTimeout(function() {
-  popup.classList.add("hidden");
-},1000);
+    const successMessage = document.getElementById("yeah");
+    if (successMessage) {
+      successMessage.textContent = "Your feedback has been submitted.";
+    }
 
-});
+    popup.classList.remove("hidden");
+    feedbackForm.reset();
+
+    window.clearTimeout(popup.successTimer);
+    popup.successTimer = window.setTimeout(function() {
+      popup.classList.add("hidden");
+    }, 3000);
+  };
+
+  submitt.addEventListener("click", submitFeedback);
+  feedbackForm.addEventListener("submit", submitFeedback);
+
+  const feedback = document.getElementById("feedback");
+  if (feedback) {
+    feedback.addEventListener("input", function() {
+      feedback.setCustomValidity("");
+    });
+  }
+}
 

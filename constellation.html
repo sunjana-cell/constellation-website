@@ -1,252 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> about constellation</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <a href="contact.html"></a>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore constellations, zodiac patterns, seasonal skies, and circumpolar stars.">
+  <title>Celestia — Constellation Atlas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body class = "starbody">
-  <div class = "star-nav">
-    <a href="index.html">sign in</a>
+<body class="starbody constellation-page">
+  <header class="star-nav" aria-label="Primary navigation">
+    <a class="brand" href="constellation.html" aria-label="celestia home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>CELESTIA</span>
+    </a>
 
-    <a href="constellation.html">about</a>
+    <nav class="nav-links" aria-label="Page links">
+      <a href="#constellation-types">Constellations</a>
+      <a href="#fact-heading">Did you know?</a>
+    </nav>
 
-    <div id = "search-nav">
-        <input id="searchbtn" type = "search" placeholder="search here"></input>
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
+    <label id="search-nav" for="searchbtn">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input id="searchbtn" type="search" placeholder="Search the atlas" aria-label="Search this page">
+    </label>
 
-    <p id="contactme">contact</p>
+    <button id="contactme" type="button">Contact</button>
+  </header>
 
-  </div>
+  <main>
+    <section class="hero-section" aria-labelledby="tag1">
+      <div class="hero-copy">
+        <p class="hero-kicker"><span aria-hidden="true">✦</span> The celestial atlas</p>
+        <h1 id="tag1">Make a wish<br><em>from the stars.</em></h1>
+        <p id="tagline">Explore the patterns that have guided travelers, inspired storytellers, and shaped our view of the night sky.</p>
 
-   <div class ="content-box">
-    <p id ="tag1"> constellation</p>
-    <p id ="tagline">wish from the stars to see the stars</p>
-
-    <div id="drop">
-        <div id="btnme">
-       <button id="aboutauthor"> Know   about   developer  </button>
-    </div>
-        
-    <div id="types">
-        <select id="types12" name="types">
-        <option value="">constellation type</option>
-       <option value="circumpolar">circumpolar</option>
-        <option value="zodiacal">zodiacal</option>
-        <option value="seasonal">seasonal</option>
-        </select>
-    </div>
-    </div>
-     
-     <div id="shoot-container">
-            <p id="shoot"> shooting star? make a wish</p>
+        <div id="drop">
+          <a class="hero-button primary" href="#exploremore">Explore constellations <span aria-hidden="true"></span></a>
+          <div id="types">
+            <label class="visually-hidden" for="types12">Constellation type</label>
+            <select id="types12" name="types">
+              <option value="">category</option>
+              <option value="circumpolar">Circumpolar</option>
+              <option value="zodiacal">Zodiacal</option>
+              <option value="seasonal">Seasonal</option>
+            </select>
+          </div>
         </div>
+      </div>
 
-    <div id="media">
-        <video id="video" autoplay muted loop>
+      <div class="hero-visual">
+        <div id="media">
+          <video id="video" autoplay muted loop playsinline aria-label="Stars moving across the night sky">
             <source src="star.mp4.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="explore">
-        <p id="exploremore"> explore constellations</p>
-        <p id="define"> Different cultures and countries invented their own constellations, <br>
-            some of which lasted into the early 20th century before today's constellations were internationally recognized.<br>
-            A constellation is an area on the celestial sphere in which a group of visible <br>
-            stars forms a perceived pattern or outline, typically representing an animal, mythological subject, or inanimate object.<br>
-            Twelve (or thirteen) ancient constellations belong to the zodiac. The origins of <br>
-            the zodiac remain historically uncertain; its astrological divisions became prominent c. <br>
-            400 BC in Babylonian or Chaldean astronomy. Constellations appear in Western <br>
-            culture via Greece and are mentioned in the works of Hesiod, Eudoxus and Aratus. <br>
-            The traditional 48 constellations, consisting of the zodiac and 36 more (now 38, following the division of Argo Navis <br>
-            into three constellations) are listed by Ptolemy, a Greco-Roman astronomer from Alexandria, Egypt, in his Almagest. <br>
-            The formation of constellations was the subject of extensive mythology, most notably in the Metamorphoses of the <br>
-            Latin poet Ovid. Constellations in the far southern sky were added from the 15th century until the mid-18th <br>
-             century when European explorers began traveling to the Southern Hemisphere. <br>
-
-In 1922, the International Astronomical Union (IAU) formally accepted the modern list of 88 constellations, and in 1928 <br>
-adopted official constellation boundaries that together cover the entire celestial sphere.
-        </p>
-
-        <div class="slider">
-        <div class="box1">
-            <p>Pegasus</p>
-            <a href="https://en.wikipedia.org/wiki/Pegasus_(constellation)"><img src="pegasus1.png">
+          </video>
         </div>
-        <div class="box1">
-             <p>leo</p>
-            <a href="https://en.wikipedia.org/wiki/Leo_(constellation)"><img src="leo1.png">
-        </div>
-        <div class="box1">
-             <p>orion</p>
-            <a href="https://en.wikipedia.org/wiki/Orion_(constellation)"><img src="orion2.png">
-        </div>
-        <div class="box1">
-             <p>cygnus</p>
-            <a href="https://en.wikipedia.org/wiki/cygnus_(constellation)"><img src="cygnus.png">
-        </div>
-        <div class="box1">
-             <p>hercules</p>
-            <a href="https://en.wikipedia.org/wiki/hercules_(constellation)"><img src="hercules.png">
-        </div>
-        <div class="box1">
-             <p>ophiuchus</p>
-            <a href="https://en.wikipedia.org/wiki/ophiuchus_(constellation)"><img src="ophicuchis.png">
-        </div>
-    </div>
-    </div>
-    
-    <div id="knowmore">
-        <a href="https://en.wikipedia.org"> know more</a>
-    </div>
+        <p id="shoot"><span aria-hidden="true">✦</span> Look up — Make a wish, love.</p>
+      </div>
+    </section>
 
-    </div>
-    <div class="fact-quiz">
-        <h1 class="dyk"> Do you know?</h1>
-        <div class="factu">
-
-            <p id="one">
-                Aquarius is one of the oldest recognized constellations, positioned in a region of the sky often called "The Sea" because it is surrounded by other water-related constellations like Cetus (the whale), Pisces (the fish), and Eridanus (the river).
-            </p>
-
-            <button id="clicki">
-                next
-            </button>
+    <section class="explore" aria-labelledby="exploremore">
+      <header class="section-heading">
+        <div>
+          <p class="section-kicker">Featured stories</p>
+          <h2 id="exploremore">Explore the atlas</h2>
         </div>
-    </div>
+        <p>From ancient myths to modern astronomy, constellations turn scattered light into a shared language.</p>
+      </header>
 
-    <div class="circumploar">
-        <h1 id="polarhead">Circumpolar</h1>
-        <div id="polar1">
-            <img src="carina.jpg">
+      <div id="define">
+        <article>
+          <span>01</span>
+          <h3>Celestial regions</h3>
+          <p>A constellation is a defined region of the celestial sphere. Its stars may form an animal, figure, object, or imagined scene.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Shared mythology</h3>
+          <p>Across cultures, people have read the same stars differently, creating patterns rich in local history and meaning.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Modern sky maps</h3>
+          <p>The IAU recognizes 88 constellations, with official boundaries that divide the entire night sky.</p>
+        </article>
+      </div>
+
+      <div class="slider" aria-label="Featured constellations">
+        <article class="box1">
+          <p>Pegasus</p>
+          <a href="https://en.wikipedia.org/wiki/Pegasus_(constellation)" target="_blank" rel="noopener noreferrer" aria-label="Learn about Pegasus">
+            <img src="pegasus1.png" alt="Pegasus constellation">
+          </a>
+        </article>
+        <article class="box1">
+          <p>Leo</p>
+          <a href="https://en.wikipedia.org/wiki/Leo_(constellation)" target="_blank" rel="noopener noreferrer" aria-label="Learn about Leo">
+            <img src="leo1.png" alt="Leo constellation">
+          </a>
+        </article>
+        <article class="box1">
+          <p>Orion</p>
+          <a href="https://en.wikipedia.org/wiki/Orion_(constellation)" target="_blank" rel="noopener noreferrer" aria-label="Learn about Orion">
+            <img src="orion2.png" alt="Orion constellation">
+          </a>
+        </article>
+        <article class="box1">
+          <p>Cygnus</p>
+          <a href="https://en.wikipedia.org/wiki/Cygnus_(constellation)" target="_blank" rel="noopener noreferrer" aria-label="Learn about Cygnus">
+            <img src="cygnus.png" alt="Cygnus constellation">
+          </a>
+        </article>
+        <article class="box1">
+          <p>Hercules</p>
+          <a href="https://en.wikipedia.org/wiki/Hercules_(constellation)" target="_blank" rel="noopener noreferrer" aria-label="Learn about Hercules">
+            <img src="hercules.png" alt="Hercules constellation">
+          </a>
+        </article>
+        <article class="box1">
+          <p>Ophiuchus</p>
+          <a href="https://en.wikipedia.org/wiki/Ophiuchus_(constellation)" target="_blank" rel="noopener noreferrer" aria-label="Learn about Ophiuchus">
+            <img src="ophicuchis.png" alt="Ophiuchus constellation">
+          </a>
+        </article>
+      </div>
+
+      <div id="knowmore">
+        <a href="https://en.wikipedia.org/wiki/Constellation" target="_blank" rel="noopener noreferrer">Open and learn <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="fact-quiz" aria-labelledby="fact-heading">
+      <div class="fact-heading-wrap">
+        <p class="section-kicker">Tonight’s discovery</p>
+        <h2 id="fact-heading" class="dyk">Did you know?</h2>
+      </div>
+      <div class="factu">
+        <p id="one">Aquarius is one of the oldest recognized constellations. It lies in a region once called “The Sea,” alongside Cetus, Pisces, and Eridanus.</p>
+        <button id="clicki" type="button"><span>Next discovery</span><span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section id="constellation-types" class="constellation-types" aria-label="Constellation categories">
+      <article class="constellation-category">
+        <header class="category-heading">
+          <p>1. Always visible</p>
+          <h2 id="polarhead">Circumpolar</h2>
+        </header>
+        <div class="category-gallery">
+          <figure id="polar1"><img src="carina.jpg" alt="Carina constellation"><figcaption>Carina</figcaption></figure>
+          <figure id="polar2"><img src="cassiopeia.jpg" alt="Cassiopeia constellation"><figcaption>Cassiopeia</figcaption></figure>
+          <figure id="polar3"><img src="centaurus.webp" alt="Centaurus constellation"><figcaption>Centaurus</figcaption></figure>
         </div>
-         <div id="polar2">
-            <img src="cassiopeia.jpg">
+        <p id="fncir" class="category-copy">Circumpolar constellations never appear to set below the horizon from certain latitudes. Near the poles, many northern or southern patterns remain visible throughout the night.</p>
+      </article>
+
+      <article class="constellation-category">
+        <header class="category-heading">
+          <p>2. The ecliptic</p>
+          <h2 id="zohead">Zodiacal</h2>
+        </header>
+        <div class="category-gallery">
+          <figure id="zo1"><img src="aqua.jpg" alt="Aquarius constellation"><figcaption>Aquarius</figcaption></figure>
+          <figure id="zo2"><img src="AriesCC.jpg" alt="Aries constellation"><figcaption>Aries</figcaption></figure>
+          <figure id="zo3"><img src="pi.jpg" alt="Pisces constellation"><figcaption>Pisces</figcaption></figure>
         </div>
-         <div id="polar3">
-            <img src="centaurus.webp">
+        <p class="category-copy">Zodiac constellations follow the Sun’s apparent path. Thirteen constellations touch the ecliptic, although traditional astrology primarily uses twelve signs.</p>
+      </article>
+
+      <article class="constellation-category">
+        <header class="category-heading">
+          <p>3. Time in motion</p>
+          <h2 id="seahead">Seasonal</h2>
+        </header>
+        <div class="category-gallery">
+          <figure id="sea1"><img src="lyra.jpg" alt="Lyra constellation"><figcaption>Lyra</figcaption></figure>
+          <figure id="sea2"><img src="canis.jpg" alt="Canis constellation"><figcaption>Canis Major</figcaption></figure>
+          <figure id="sea3"><img src="andro.jpg" alt="Andromeda constellation"><figcaption>Andromeda</figcaption></figure>
         </div>
-    </div>
+        <p class="category-copy">Seasonal constellations change with Earth’s journey around the Sun. Winter brings Orion, spring reveals Leo, summer lights up Lyra, and autumn introduces Pegasus.</p>
+      </article>
 
-    <div id="funcircum">
-        <p id="fncir">
-            A constellation or star that never sets below the horizon when viewed from a particular latitude on Earth is termed circumpolar. <br>
-            From the North Pole or South Pole, all constellations south or north of the celestial equator are circumpolar.<br>
-            circumpolar constellations may include Ursa Major, Ursa Minor, Draco, Cepheus, Cassiopeia, and the less-known<br
-             Camelopardalis, Lynx and Lacerta.
-        </p>
+      <div id="btnn"><a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer"><button type="button">Continue learning <span aria-hidden="true">↗</span></button></a></div>
+    </section>
+  </main>
 
-    <div class="zodiacal1">
-        <h1 id="zohead">Zodiacal</h1>
-        <div id="zo1">
-            <img src="aqua.jpg">
-        </div>
-         <div id="zo2">
-            <img src="AriesCC.jpg">
-        </div>
-         <div id="zo3">
-            <img src="pi.jpg">
-        </div>
-    </div>
-
-    <div id="funcircum">
-        <p id="fncir">
-          Zodiac constellations are a group of star patterns that lie along the,<br>
-           apparent path of the Sun across the sky<br>
-            The Sun actually passes through 13 constellations along the ecliptic, not 12.<br>
-         These include Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpius, Sagittarius, Capricornus, Aquarius, Pisces, and Ophiuchus<br>
-          Ancient Babylonians divided the zodiac into 12 equal 30-degree segments to match their calendar months, leaving out Ophiuchus<br
-           and standardizing the time the Sun spends in each sign
-         </p>
-    </div>
-
-    <div class="seasonal1">
-        <h1 id="seahead">seasonal</h1>
-        <div id="sea1">
-            <img src="lyra.jpg">
-        </div>
-         <div id="sea2">
-            <img src="canis.jpg">
-        </div>
-         <div id="sea3">
-            <img src="andro.jpg">
-        </div>
-    </div>
-     <div id="funcircum">
-        <p id="fncir">
-         Seasonal constellations are groups of stars that appear in the night sky only during specific times of the year. <br>
-          As Earth revolves around the Sun, our nighttime view points toward a different section of the universe every few months.<br>
-           During the day, the Sun blocks our view of the stars that lie behind it in space. Those hidden stars only become <br>
-           visible months later when Earth moves to the other side of its orbit during the night.<br>
-           <br>
-           Winter: Orion, Taurus, and Canis Major<br>
-           Spring: Leo, Virgo, and Ursa Major<br>
-           Summer: Cygnus, Lyra, and Aquila<br>
-           Autumn: Pegasus, Andromeda, and Cassiopeia
-         </p>
-    </div>
-
-    <div id="btnn">
-   <a href="https://www.wikipedia.org"><button>learn more</button></a>
-    </div>
-
-<div id="chatbot">
-    
-    <div id="chatnav">
-        <h1>space bot</h1>
-    </div>
-    
-    <div id="botmsg">
-        <p id="hey">
-            hey there, Iam your personal doubt solver, ask me anything?
-        </p>
-    </div>
-    
-    <div id="botfoot">
-       <input id="searchbtn" type = "search" placeholder="ask me"></input>
-    
-       <button id="sendbtn">
-       <i class="fa-regular fa-paper-plane"></i>
-    </button>
-
-    </div>
-
-</div>
-
-<footer>
+  <footer aria-label="Site footer">
         <div id="last">
-            <div id="contactji">
-                <h1 id="cont"> contact us </h1>
-                 <p>seashells@gmail.com</p>
-                 <p>0987654321</p>
-                 <p>instagram- @xyz12</p>
-                 <p>github - @seashells-cell</p>
-                 <p>linkedIn - @seashellsxyz</p>
-            </div>
+            <section id="contactji" aria-labelledby="contact-heading">
+                <p class="footer-kicker">Stay connected</p>
+                <h2 id="contact-heading">Contact us</h2>
+                <address>
+                    <a href="mailto:seashells@gmail.com">sunjana99100@gmail.com</a>
+                    <a href="#">Instagram — @sanjanayrrr</a>
+                    <a href="#">GitHub — @sunjana-cell</a>
+                    <a href="#">LinkedIn — @Sanjana undefined</a>
+                </address>
+            </section>
 
-            <form id="feedback-1">
+            <form id="feedback-1" aria-labelledby="enter">
+                <p class="footer-kicker">Your perspective matters</p>
                 <p id="enter">Give us your feedback</p>
-                <input id="feedback" type= "text" placeholder="leaving without a feedback , Love?">
-                <button id="sub"> submit </button>
+                <label class="visually-hidden" for="feedback">Your feedback</label>
+                <textarea id="feedback" placeholder="write it write it write it down?"></textarea>
+                <button id="sub" type="button">Submit<span aria-hidden="true">→</span></button>
             </form>
 
-            <div id="success-popup" class="hidden">
-                <p id="yeah">Your feedback has been submitted!</p>
-           </div> 
-
-            <div id="copyright">
-                <h1 id="cont"> copyright </h1>
-                 <p>---------------</p>
-                 <p>© 2026 sanjana. All rights reserved.</p>
-                 <p>---------------</p>
+            <div id="success-popup" class="hidden" role="status" aria-live="polite">
+                <p id="yeah">Your feedback has been submitted.</p>
             </div>
+
+            <section id="copyright" aria-label="Copyright">
+                <p class="footer-kicker">Celestia</p>
+                <h2 id="cont">Copyright</h2>
+                <p>© 2026 Sanjana.</p>
+                <p>All rights reserved.</p>
+            </section>
         </div>
     </footer>
 
-     <script src = "script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -3,48 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contellation sign in</title>
+    <title>Constellation Sign In</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main class="signin-page">
+        <section class="signin-shell" aria-labelledby="signin-heading">
+            <div class="signin-heading">
+                <p class="eyebrow">THE NIGHT sun</p>
+                <h1 id="signin-heading">Find your constellation</h1>
+                <p>Enter the observatory and begin exploring the stories written in the stars.</p>
+            </div>
 
-    <div class = "sign in">
-            <h1>Sign In</h1>
-    </div>
+            <form id="signinbox" class="signin-card" novalidate>
+                <div class="field-group">
+                    <label id="email-label" for="email">Email address</label>
+                    <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
 
-    <div class = "herohome">
+                <div class="field-group">
+                    <label id="username-label" for="user">Username</label>
+                    <input id="user" type="text" placeholder="Your star name" autocomplete="username" required>
+                    <p id="usererror" class="form-error" aria-live="polite"></p>
+                </div>
 
-         <form id="signinbox">
+                <div class="field-group">
+                    <label id="password-label" for="password">Password</label>
+                    <input id="password" type="password" placeholder="At least 8 characters" autocomplete="current-password" required>
+                    <p id="passerror" class="form-error" aria-live="polite"></p>
+                </div>
 
-            <p id ="email-label"> enter you email</p>
+                <button id="signinbtn" type="button">Enter observatory <span aria-hidden="true">→</span></button>
+            </form>
 
-            <input id ="email" type="email" placeholder = " Email " required ></input>
+            <p id="desk">Your constellation guide adapts beautifully to every screen.</p>
+        </section>
+    </main>
 
-
-            <p id ="username-label"> enter you username</p>
-
-            <input id ="user" type="text" placeholder = " Username " required></input>
-            <p id="usererror"></p>
-
-            <p id ="password-label"> enter you password</p>
-
-            <input id ="password" type="password" placeholder = " Password " required></input>
-
-                <i class="fa-light fa-eye"></i>
-
-              <p id="passerror"></p>
-
-        </form>
-    </div>
-
-    <div class = "button">
-          <button id = "signinbtn">sign in</button>
-    </div>
-
-    <p id="desk">
-        view on desktop mode for better experience, if you are a mobile user.
-    </p>
-    
-    <script src = "script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
