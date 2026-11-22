@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
-
 body {
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   color: var(--ivory);
