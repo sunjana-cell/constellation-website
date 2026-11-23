@@ -1745,21 +1745,6 @@ button {
     gap: 1rem;
 }
 
-.sanjana img{
-  max-width:100%;
-  width: 50%;
-  height: auto;
-  object-fit: cover;
-  border-top-left-radius: 7rem;
-  border-bottom-left-radius: 7rem;
-  border-top-right-radius: 7rem;
-  border-bottom-right-radius: 7rem;
-}
-
-.sanjana img:hover{
-  cursor: pointer;
-}
-
  #info{
     display: flex;
     flex-direction: column;
@@ -1768,7 +1753,7 @@ button {
  }
 
  #sunmore{
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 10rem;
   height: 2rem;
   font-size: 0.95rem;
@@ -1794,13 +1779,6 @@ button {
     margin-left: 0;
     flex-direction: column;
     gap: 1rem;
-  }
-
-  .sanjana img {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-    border-radius: 1rem;
   }
 
   #info {
