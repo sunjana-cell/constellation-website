@@ -200,14 +200,13 @@ body {
     gap: 1rem; 
 }
 
-#aboutauthor,
 #types12,
 select {
   min-height: 48px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(23, 19, 15, 0.78);
-  color: var(--ivory);
+  background: rgba(20, 64, 82, 0.78);
+  color: white;
 }
 
 #shoot { 
@@ -346,35 +345,8 @@ select {
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.5); 
 }
 
-#funcircum { 
-    max-width: 58rem; 
-    margin-inline: auto; 
-    padding-inline: 1rem; 
-}
-
-#fncir { 
-    color: var(--sand); 
-    line-height: 1.8; 
-    text-shadow: none; 
-}
-
-#chatbot { 
-    border: 1px solid var(--line); 
-    background: var(--charcoal); 
-}
-
 #chatnav h1 { 
     background: var(--sand); 
-    color: var(--void); 
-}
-
-#botmsg { 
-    background: var(--umber); 
-}
-
-#botfoot input,
-#sendbtn { 
-    background: var(--ivory); 
     color: var(--void); 
 }
 
@@ -713,14 +685,17 @@ select {
   padding: 0 1.25rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  color: var(--ivory);
+  text-decoration: none;
+  background: rgb(78, 43, 43);
+  border: none;
+  color: #cbb99d;
 }
 
 #knowmore a:hover { 
-    background: rgba(0, 0, 0, 0.09); 
-    color: var(--starlight);    
-    color: var(--starlight);
+   color: white;
+   border: 1px solid white;
  }
+
 .fact-quiz {
   width: min(1120px, calc(100% - 2.5rem));
   min-height: 340px;
@@ -841,27 +816,6 @@ select {
     background: transparent; 
     color: var(--ivory); 
     cursor: pointer; 
-}
-
-#chatnav h2 { 
-    height: 54px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 0.5rem; 
-    margin: 0; 
-    background: var(--sand); 
-    color: var(--void); 
-    font-size: 0.9rem; 
-}
-
-#botmsg {
-     min-height: 100px; 
-     margin: 1rem; 
-     padding: 1rem; 
-     border: 1px solid var(--line); 
-     border-radius: 0.75rem; 
-     background: var(--umber); 
 }
 
 @media (max-width: 900px) {
@@ -1780,5 +1734,82 @@ button {
 
   .category-heading h2 {
     font-size: 2.25rem;
+  }
+}
+
+.sanjana {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9rem;
+    gap: 1rem;
+}
+
+.sanjana img{
+  max-width:100%;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 7rem;
+  border-bottom-left-radius: 7rem;
+  border-top-right-radius: 7rem;
+  border-bottom-right-radius: 7rem;
+}
+
+.sanjana img:hover{
+  cursor: pointer;
+}
+
+ #info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+ }
+
+ #sunmore{
+  margin-top: 2rem;
+  width: 10rem;
+  height: 2rem;
+  font-size: 0.95rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: none;
+  background-color: #2c2e31;
+  color: #cbb99d;
+  text-align: center;
+ }
+
+ #sunmore:hover{
+  cursor: pointer;
+  background-color: #cbb99d;
+  color: #2c2e31;
+  transition: all 0.2s ease-in-out;
+ }
+
+ @media (max-width: 620px) {
+  .sanjana {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sanjana img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    border-radius: 1rem;
+  }
+
+  #info {
+    align-items: center;
+    text-align: center;
+  }
+
+  #sunmore {
+    width: 10rem;
+    font-size: 0.85rem;
   }
 }
